@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+	</script> 
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+
+	<title>Entrega semana 7</title>
+</head>
+<body background="fondo.jpg" onkeyup="oprimir()">
+<script type="text/javascript">
+
+
+       function oprimir()
+         {
+         	console.log(event.code);
+
+
+            if (event.code=="KeyA")
+            {
+                document.getElementById('A').style.display="block";
+                document.getElementById('B').style.display="none";
+                document.getElementById('C').style.display="none";
+                
+            }
+
+            if (event.code=="KeyB")
+            {
+                document.getElementById('A').style.display="none";
+                document.getElementById('B').style.display="block";
+                document.getElementById('C').style.display="none";
+                
+            }
+
+           if (event.code=="KeyC")
+            {
+                document.getElementById('A').style.display="none";
+                document.getElementById('B').style.display="none";
+                document.getElementById('C').style.display="block";
+                
+            }
+        }
+
+ 
+      </script> 
+
+
+	<center>
+	<div id="div" class="titulo">
+		<h1 style=" font-family: Roboto, sans-serif; color: ">Colores</h1>
+		</div>
+		<div class="LA" id="A">
+		</div>
+		<div class="LB" id="B">
+		</div>
+		<div class="LC" id="C">
+		</div>
+		<br><br><br><br><br>
+		<input type="button" value="Ingresar" class="b1" onclick="mensaje()">
+	</center>
+
+	<center>
+		<div class="div">
+			<script type="text/javascript">
+
+				function mensaje() 
+				{
+					var mensaje;
+					var letra=prompt("Ingrese mensaje", "");
+
+					if(letra=="")
+					{
+						mensaje="No has ingresado el mensaje"; 
+					}
+					else 
+					{
+						mensaje=letra;
+						alert("Oprima aceptar para cambiar el mensaje, y luego presione a,b ó c para cambiar el color");
+						console.log(mensaje);
+
+
+					}
+					document.getElementById("A").innerHTML = mensaje;
+					document.getElementById("B").innerHTML = mensaje;
+					document.getElementById("C").innerHTML = mensaje;
+				}
+			</script>
+		</div>
+</body>
+</html>
